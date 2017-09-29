@@ -58,6 +58,13 @@ public class WordAdapter extends ArrayAdapter <Word> {
         // Get the {@link AndroidFlavor} object located at this position in the list
         Word word = getItem(position);
 
+        // Find the ImageView in the list_item.xml
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.image_view);
+        // Get the version number from the current AndroidFlavor object and
+        // set this text on the number TextView
+        imageView.setImageResource(word.getImageResourceId());
+
+
         // Find the TextView in the list_item.xml layout with the miwok_text_view
         TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwok_text_view);
         // Get the version number from the current AndroidFlavor object and

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         //Find the view Numbers Category
         TextView numbers = (TextView)findViewById(R.id.numbers);
 
+
         //set a click listener on that view
         numbers.setOnClickListener(new NumbersClickListener(){
 
