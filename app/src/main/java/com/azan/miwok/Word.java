@@ -16,7 +16,9 @@ public class Word {
     private String mMiwokTranslation;
 
     //Drawable resource ID
-    private int mImageResourceId;
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+    private static final int NO_IMAGE_PROVIDED = 0;
 
     public Word (String defaultTranslation, String miwokTranslation){
         mDefaultTranslation = defaultTranslation;
@@ -50,5 +52,12 @@ public class Word {
 
     public int getImageResourceId() {
         return mImageResourceId;
+    }
+
+    /**
+     * Return whether or not there is an image for the word
+     */
+    public boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }
