@@ -3,6 +3,7 @@ package com.azan.miwok;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -55,8 +56,11 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Word word = words.get(i); // position of the word in list
+
+                Log.v("NumbersActivity", "Current word: " + word);
+
                 mMediaPlayer = MediaPlayer.create(NumbersActivity.this, word.getAudioResourceId());
-                mMediaPlayer.start(); // no need to call prepare(); create() does that for you
+                mMediaPlayer.start();
             }
         });
     }
