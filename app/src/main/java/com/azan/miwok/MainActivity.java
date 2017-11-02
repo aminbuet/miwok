@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //set a click listener on that view
-        numbers.setOnClickListener(new NumbersClickListener(){
+        numbers.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         TextView family = (TextView)findViewById(R.id.family);
 
         //set a click listener on that view
-        family.setOnClickListener(new FamilyClickListener(){
+        family.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view){
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         TextView colors = (TextView)findViewById(R.id.colors);
 
         //set a click listener on that view
-        colors.setOnClickListener(new ColorsClickListener(){
+        colors.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view){
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         TextView phrases = (TextView)findViewById(R.id.phrases);
 
         //set a click listener on that view
-        phrases.setOnClickListener(new PhrasesClickListener(){
+        phrases.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view){
